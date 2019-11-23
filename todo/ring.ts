@@ -1,6 +1,6 @@
 import assert from "assert"
 
-import { set_t, eqv, not_eqv } from "./set"
+import { set_t } from "./set"
 import { abelian_group_t, monoid_t } from "./group"
 
 export

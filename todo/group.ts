@@ -1,4 +1,6 @@
-import { set_t, eqv } from "./set"
+import assert from "assert"
+
+import { set_t } from "./set"
 
 export
 class monoid_t <G> {

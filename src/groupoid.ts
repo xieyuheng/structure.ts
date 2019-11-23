@@ -1,6 +1,6 @@
 import assert from "assert"
 
-import { set_t } from "./set"
+import { set_t, the_eqv } from "./set"
 import { category_t } from "./category"
 
 export

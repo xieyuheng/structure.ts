@@ -13,12 +13,12 @@ import { group_t } from "./group"
 
 export
 class category_t <O, A> {
-  readonly objects: set_t <O>
-  readonly arrows: set_t <A>
-  readonly dom: (f: A) => O
-  readonly cod: (f: A) => O
-  readonly id: (x: O) => A
-  readonly compose: (f: A, g: A) => A
+  objects: set_t <O>
+  arrows: set_t <A>
+  dom: (f: A) => O
+  cod: (f: A) => O
+  id: (x: O) => A
+  compose: (f: A, g: A) => A
 
   constructor (the: {
     objects: set_t <O>,
@@ -66,10 +66,10 @@ class category_t <O, A> {
 
 export
 class functor_t <LO, LA, RO, RA> {
-  readonly lcat: category_t <LO, LA>
-  readonly rcat: category_t <RO, RA>
-  readonly map: (x: LO) => RO
-  readonly fmap: (f: LA) => RA
+  lcat: category_t <LO, LA>
+  rcat: category_t <RO, RA>
+  map: (x: LO) => RO
+  fmap: (f: LA) => RA
 
   constructor (the: {
     lcat: category_t <LO, LA>,
@@ -115,11 +115,11 @@ class functor_t <LO, LA, RO, RA> {
 
 export
 class natural_transformation_t <LO, LA, RO, RA> {
-  readonly lcat: category_t <LO, LA>
-  readonly rcat: category_t <RO, RA>
-  readonly lfun: functor_t <LO, LA, RO, RA>
-  readonly rfun: functor_t <LO, LA, RO, RA>
-  readonly component: (x: LO) => RA
+  lcat: category_t <LO, LA>
+  rcat: category_t <RO, RA>
+  lfun: functor_t <LO, LA, RO, RA>
+  rfun: functor_t <LO, LA, RO, RA>
+  component: (x: LO) => RA
 
   constructor (the: {
     lfun: functor_t <LO, LA, RO, RA>,
@@ -168,7 +168,7 @@ class natural_transformation_t <LO, LA, RO, RA> {
 
 export
 class groupoid_t <O, A> extends category_t <O, A> {
-  readonly inv: (f: A) => A
+  inv: (f: A) => A
 
   constructor (the: {
     objects: set_t <O>,

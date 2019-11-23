@@ -2,7 +2,7 @@ import assert from "assert"
 
 export
 class set_t <T> {
-  readonly eq: (x: T, y: T) => boolean
+  eq: (x: T, y: T) => boolean
 
   constructor (the: {
     eq: (x: T, y: T) => boolean
@@ -65,8 +65,8 @@ function not_eqv <T> (set: set_t <T>, lhs: T, rhs: T) {
 
 export
 class subset_t <T> {
-  readonly set: set_t <T>
-  readonly in: (x: T) => boolean
+  set: set_t <T>
+  in: (x: T) => boolean
 
   constructor (the: {
     set: set_t <T>,

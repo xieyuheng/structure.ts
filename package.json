@@ -8,20 +8,22 @@
     "url": "git@github.com:/xieyuheng/structure.ts.git"
   },
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc --watch"
+    "build": "npx tsc",
+    "watch": "npx tsc --watch",
+    "format": "npx prettier src --write"
   },
   "files": [
     "src",
     "lib"
   ],
   "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.4",
     "@types/assert": "^1.4.3",
     "@types/lodash": "^4.14.149",
     "@types/nanoid": "^2.1.0",
-    "@babel/core": "^7.7.4",
-    "@babel/plugin-transform-runtime": "^7.7.4",
     "parcel-bundler": "^1.12.4",
+    "prettier": "^2.0.5",
     "typescript": "^3.7.2"
   },
   "dependencies": {
